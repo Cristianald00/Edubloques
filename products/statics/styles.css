@@ -1,0 +1,391 @@
+* {box-sizing: border-box}
+
+/* CONSTANTS */
+:root {
+  --fontBlack: #292929;
+  --lightBlue : rgb(34, 124, 235);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+  width: 100%;
+  height: 100%;
+  font-family: 'Muli', sans-serif;
+  margin:0
+}
+
+header{
+  color: var(--fontBlack);
+  text-align: center;
+}
+header h1 {
+  font-family: 'Oswald', sans-serif;
+}
+header a{
+  color: #292929;
+  text-decoration: none;
+}
+header nav a{
+  font-size: 0.9em;
+  padding: 0.3em 0.5em;
+  margin: 0em 0.5em;
+}
+#cartContainer-nav{
+  display: block;
+  width: 90%;
+  margin: auto;
+  text-align: right;
+}
+#cartContainer-nav a{
+  font-size: 1.5em;
+}
+
+footer{
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+  text-align: center;
+}
+footer .fa{
+  padding: 0.4em 0em;
+  font-size: 1.5em;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.3em;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-instagram {
+  background: #833AB4;
+  color: white;
+}
+
+
+
+/* ------------------------------- HOME STYLES ------------------------------- */
+
+/* ........................ SLIDESHOW ........................ */
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container0 {
+  margin-top: 2em;
+  padding-bottom: 0px;
+  width: 100%;
+}
+.slideshow-container {
+  max-width: 100%;
+  height: 70vh;
+  position: relative;
+  margin: auto;
+}
+.slideshow-container .mySlides{
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+.slideshow-container .mySlides img {
+  display: block;
+  width: 100%;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px 1em;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+/* ........................ SOME PRODUCTS ........................ */
+
+#someProducts-indexPage{
+  display: inline-block;
+  width: 93%;
+  max-width: 93%;
+  max-height: 380px;
+  margin: 1em 0em 4em;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.product-indexPage{
+  cursor: pointer;
+  display: inline-block;
+  max-width: 100%;
+  width: 400px;
+  height: 100%;
+  max-height: 350px;
+}
+.product-indexPage:hover{
+  width: 410px;
+  max-height: 360px;
+  transition: width 0.3s;
+}
+.productImg-indexPage{
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
+  overflow-y: hidden;
+}
+.productImg-indexPage img{
+  display: block;
+  width: 100%;
+}
+
+.productDesc-indexPage{
+  padding: 0em 0.5em;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  display: inline-block;
+  cursor: pointer;
+  width: auto;
+  margin-top: 8%;
+  padding: 16px;
+  color: var(--fontBlack);
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  vertical-align: top;
+}
+
+/* Position the "next button" to the right */
+.next {
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* ........................ ABOUT US ........................ */
+
+#aboutUs {
+  display: block;
+  max-width: 100%;
+  padding: 5em 1em;
+  background: rgb(247, 247, 247);
+  box-sizing: border-box;
+}
+#aboutUs h2{
+  color: var(--lightBlue);
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5em;
+}
+#aboutUs h3{
+  font-family: 'Oswald', sans-serif;
+}
+#aboutUs div{
+  display: block;
+  width: 700px;
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+  font-size: 0.9em;
+  line-height: 2em;
+}
+
+
+/* ........................ CONTACT US ........................ */
+
+#contactUs{
+  display: block;
+  width: 750px;
+  max-width: 90%;
+  margin: auto;
+  padding: 5em 1em;
+  text-align: center;
+  line-height: 1.8em;
+}
+#contactUs h2{
+  color: var(--lightBlue);
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5em;
+}
+#contactUs input, #contactUs textarea{
+  padding: 1em;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 1em;
+}
+#contactUs input[type="submit"]{
+  cursor: pointer;
+  background: var(--fontBlack);
+  color: white;
+  width: 350px;
+}
+#contactUs input[type="submit"]:hover{
+  background: rgb(75, 75, 75);
+}
+
+
+
+/* ------------------------------- PRODUCTS STYLES ------------------------------- */
+
+#someProducts-listPage{
+  display: block;
+  width: 93%;
+  max-width: 93%;
+  text-align: center;
+}
+.product-listPage{
+  cursor: pointer;
+  display: inline-block;
+  max-width: 100%;
+  width: 350px;
+  height: 100%;
+  margin-bottom: 2em;
+  max-height: 350px;
+  background: rgb(250, 250, 250);
+  vertical-align: top;
+}
+.product-listPage:hover{
+  width: 360px;
+  max-height: 360px;
+  transition: width 0.3s;
+}
+.productImg-listPage{
+  display: block;
+  width: 100%;
+  height: 250px;
+  max-height: 250px;
+  overflow-y: hidden;
+}
+.productImg-listPage img{
+  display: block;
+  width: 100%;
+  min-height: 100%;
+}
+
+.productDesc-listPage{
+  padding: 0em 0.5em;
+}
+
+
+
+/* ------------------------------- DETAIL STYLES ------------------------------- */
+
+#detailPage{
+  display: block;
+  max-width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.productImg-detailPage{
+  display: block;
+  width: 1000px;
+  max-width: 95%;
+  margin: 2em auto 0em;
+}
+.productImg-detailPage img{
+  width: 100%;
+}
+.productMiniImg-detailPage{
+  display: block;
+  margin: 1em auto 1em;
+  width: 700px;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow-x: auto;
+  text-align: center;
+}
+.productMiniImg-detailPage img{
+  display: inline-block;
+  width: 80px;
+  max-width: 80%;
+}
+
+.productDesc-detailPage{
+  display: block;
+  width: 900px;
+  max-width: 90%;
+  margin: auto;
+  font-size: 0.9em;
+  line-height: 1.7em;
+}
+
+.productAdd-detailPage{
+  width: 330px;
+  margin-left: auto;
+  line-height: 1em;
+}
+.productAdd-detailPage input[type="number"] {
+  width: 6em;
+  padding: 1em 0em;
+  border: 1px solid gray;
+  text-align: center;
+  font-size: 1em;
+}
+.productAdd-detailPage input[type="button"] {
+  background: var(--lightBlue);
+  color: white;
+  width: 200px;
+  margin-left: 1em;
+  padding: 1em 0.5em;
+  border: none;
+  font-size: 1em;
+}
+
+.productName-detailPage{
+  font-family: 'Oswald', sans-serif;
+}

@@ -1,0 +1,52 @@
+@media (max-width: 399px) {
+
+}
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+
+}
+
+@media (max-width: 5490px) {
+
+}
+
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+
+}
+
+@media (max-width: 749px) {
+  #loginForm-loginPage{
+    width: 90%;
+    max-width: 100%;
+  }
+}
+
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+}
+
+@media (max-width: 999px) {
+
+}
+
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+}
+
+@media (max-width: 1199px) {
+
+}
+
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
+}
