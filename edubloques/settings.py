@@ -25,7 +25,7 @@ SECRET_KEY = 'hs3i(6vm_ht8=pk8zd&uyfy_3&sx%=bic0ecic5p)dpo4%^sr='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['edubloques.herokuapp.com']
 
 
 # Application definition
