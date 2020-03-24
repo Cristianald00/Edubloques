@@ -11,3 +11,7 @@ urlpatterns = [
     # /products/id
     url(r'^(?P<album_id>[0-9]+)/$', views.detail, name='detail'),
 ]
+
+urlpatterns += patterns('',
+ (r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+ )
