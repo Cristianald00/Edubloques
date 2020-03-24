@@ -132,7 +132,7 @@ USE_TZ = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = 'https://edubloques.herokuapp.com/edubloques'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
