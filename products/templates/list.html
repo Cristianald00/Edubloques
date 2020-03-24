@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1>Products</h1>
+
+  {% if all_products %}
+    <ul>
+      {% for product in all_products %}
+      <li><a href="{% url 'detail' product.id %}">{{product.name}}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <h3>There are no products</h3>
+  {% endif %}
+
+  <div id="someProducts-listPage" class="">
+
+    <div class="product-listPage" onclick="goSeeProduct(1)">
+      <div class="productImg-listPage">
+        <img src="https://images.pexels.com/photos/381228/pexels-photo-381228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+      </div>
+      <div class="productDesc-listPage">
+        <p>Pequeño carro amarillo</p>
+        <p>$50.000</p>
+      </div>
+    </div>
+
+    <div class="product-listPage" onclick="goSeeProduct(1)">
+      <div class="productImg-listPage">
+        <img src="https://images.pexels.com/photos/463684/pexels-photo-463684.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+      </div>
+      <div class="productDesc-listPage">
+        <p>Pequeño carro amarillo</p>
+        <p>$50.000</p>
+      </div>
+    </div>
+
+    <div class="product-listPage" onclick="goSeeProduct(1)">
+      <div class="productImg-listPage">
+        <img src="https://images.pexels.com/photos/955793/pexels-photo-955793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+      </div>
+      <div class="productDesc-listPage">
+        <p>Pequeño carro amarillo</p>
+        <p>$50.000</p>
+      </div>
+    </div>
+
+    <div class="product-listPage" onclick="goSeeProduct(1)">
+      <div class="productImg-listPage">
+        <img src="https://images.pexels.com/photos/1720957/pexels-photo-1720957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+      </div>
+      <div class="productDesc-listPage">
+        <p>Pequeño carro amarillo</p>
+        <p>$50.000</p>
+      </div>
+    </div>
+
+    <div class="product-listPage" onclick="goSeeProduct(1)">
+      <div class="productImg-listPage">
+        <img src="https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+      </div>
+      <div class="productDesc-listPage">
+        <p>Pequeño carro amarillo</p>
+        <p>$50.000</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function goSeeProduct(n) {
+      window.location.href = n + "/";
+    }
+  </script>
+
+{% endblock %}

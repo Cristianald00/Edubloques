@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300|Oswald:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title></title>
+  </head>
+  <body>
+
+    <header>
+      <h1><a href="/">Edubloques</a></h1>
+
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/products/list">Productos</a>
+        <a href="/#aboutUs">Acerca de</a>
+        <a href="/#contactUs">Contáctanos</a>
+      </nav>
+
+      <div id="cartContainer-nav">
+        0 <a href="#" class="fa fa-shopping-cart" contextmenu=""></a>
+      </div>
+    </header>
+
+    {% block body %}
+    {% endblock %}
+
+    <footer>
+      <div class="">
+        <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+      </div>
+      <br>
+      <p>&copy;2020 por Edubloques</p>
+    </footer>
+
+  </body>
+</html>

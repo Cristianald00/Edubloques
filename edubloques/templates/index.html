@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- ................................ HOME SLIDESHOW ................................ -->
+<div class="slideshow-container0">
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="https://images.pexels.com/photos/1275235/pexels-photo-1275235.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+      <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="https://images.pexels.com/photos/1148496/pexels-photo-1148496.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+</div>
+
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+  }
+</script>
+
+
+<!-- ................................ PRODUCTS ................................ -->
+
+<a class="prev" onclick="plusSlides(0)">&#10094;</a>
+<div id="someProducts-indexPage" class="">
+
+  <div class="product-indexPage" onclick="goSeeProduct(1)">
+    <div class="productImg-indexPage">
+      <img src="https://images.pexels.com/photos/381228/pexels-photo-381228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+    </div>
+    <div class="productDesc-indexPage">
+      <p>Pequeño carro amarillo</p>
+      <p>$50.000</p>
+    </div>
+  </div>
+
+  <div class="product-indexPage" onclick="goSeeProduct(1)">
+    <div class="productImg-indexPage">
+      <img src="https://images.pexels.com/photos/463684/pexels-photo-463684.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+    </div>
+    <div class="productDesc-indexPage">
+      <p>Pequeño carro amarillo</p>
+      <p>$50.000</p>
+    </div>
+  </div>
+
+  <div class="product-indexPage" onclick="goSeeProduct(1)">
+    <div class="productImg-indexPage">
+      <img src="https://images.pexels.com/photos/955793/pexels-photo-955793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+    </div>
+    <div class="productDesc-indexPage">
+      <p>Pequeño carro amarillo</p>
+      <p>$50.000</p>
+    </div>
+  </div>
+
+  <div class="product-indexPage" onclick="goSeeProduct(1)">
+    <div class="productImg-indexPage">
+      <img src="https://images.pexels.com/photos/1720957/pexels-photo-1720957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+    </div>
+    <div class="productDesc-indexPage">
+      <p>Pequeño carro amarillo</p>
+      <p>$50.000</p>
+    </div>
+  </div>
+
+  <div class="product-indexPage" onclick="goSeeProduct(1)">
+    <div class="productImg-indexPage">
+      <img src="https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+    </div>
+    <div class="productDesc-indexPage">
+      <p>Pequeño carro amarillo</p>
+      <p>$50.000</p>
+    </div>
+  </div>
+
+</div>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<script>
+  function plusSlides(n) {
+    var container = document.getElementById("someProducts-indexPage")
+
+    if (n == 1) {
+      container.scrollBy(400, 0); // Scroll 100px to the right
+    } else {
+      container.scrollBy(-400, 0); // Scroll 100px to the left
+    }
+  }
+
+  function goSeeProduct(n) {
+    window.location.href = n + "/";
+  }
+</script>
+
+
+
+<!-- ................................ ABOUT ................................ -->
+
+<div id="aboutUs" class="">
+  <div class="">
+    <h2>Acerca de</h2>
+    <h3>Te encantará</h3>
+    <p>Desde el primer día nuestra misión ha sido expandir nuestro catálogo de productos y mejorar la experiencia de nuestros clientes. Nos enorgullece ver hasta dónde hemos llegado, pero no podemos quedarnos ahí.</p>
+    <p>Todas nuestras colecciones han sido cuidadosamente seleccionadas. Las opciones de entrega y los métodos de pago que ofrecemos son muy diversos y flexibles. Navega por nuestra galería de productos y vive la experiencia que sólo Edubloques te puede ofrecer. No dudes en contactarnos en caso de tener alguna duda, comentario o sugerencia.</p>
+  </div>
+</div>
+
+
+<!-- ................................ CONTACT US ................................ -->
+
+<div id="contactUs" class="">
+  <h2>Contáctanos</h2>
+  <form class="" action="index.html" method="post">
+    <input type="text" name="name" value="" placeholder="Nombre" style="width: 350px;">
+    <input type="email" name="email" value="" placeholder="Email" style="width: 350px;"><br>
+    <input type="text" name="subject" value="" placeholder="Asunto" style="width: 700px;"><br>
+    <textarea name="name" rows="8" cols="80" placeholder="Escribe aquí ..."></textarea><br>
+    <br>
+    <input type="submit" name="" value="Enviar">
+  </form>
+</div>
+
+
+{% endblock %}

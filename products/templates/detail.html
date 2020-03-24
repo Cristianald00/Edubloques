@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+  <div id="detailPage">
+
+    <div class="productImg-detailPage">
+      <img src="https://images.pexels.com/photos/381228/pexels-photo-381228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+    </div>
+
+    <div class="productMiniImg-detailPage">
+      <img src="https://images.pexels.com/photos/381228/pexels-photo-381228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+      <img src="https://images.pexels.com/photos/381228/pexels-photo-381228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+      <img src="https://images.pexels.com/photos/381228/pexels-photo-381228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+    </div>
+
+    <div class="productDesc-detailPage">
+
+      <div class="productAdd-detailPage">
+        <p style="text-align: right; font-size: 1.2em;" >$47.900,00</p>
+        <p>Cantidad</p>
+        <input type="number" name="" value="" placeholder="0">
+        <input type="button" name="" value="Agregar al carrito">
+      </div>
+
+      <br>
+      <h2 class="productName-detailPage"><b>Producto es {{album_id}}</b></h2>
+      <p>Minifiguras genéricas star wars cinco maestros oscuros: darth vader, darth maul, darth sidious (palpatine), darth nihilus y conde doku. El precio corresponde a las cinco minifiguras que incluyen además el sable de luz, máscaras, una pequeña base negra y el envío gratis a nivel nacional. Gran calidad, detalles perfectos y 100% compatibles con lego. Es posible cambiarlas por otras minifiguras disponibles. Ir al siguiente enlace para ver las minifiguras disponibles.</p>
+      <br>
+
+      <h3>INFORMACIÓN DEL PRODUCTO</h3>
+      <p>El producto es un producto nuevo y de gran calidad. Cada minifigura viene en una bolsa sellada.</p>
+      <br>
+
+      <h3>POLÍTICA DE DEVOLUCIÓN Y REEMBOLSO</h3>
+      <p>Si el producto presenta defectos de calidad será cambiado por uno que se encuentre en perfectas condiciones o se hará la devolución del dinero</p>
+      <br>
+
+      <h3>POLÍTICA DE ENVÍOS</h3>
+      <p>El precio incluye el envío a nivel nacional</p>
+      <br>
+
+    </div>
+
+  </div>
+
+{% endblock %}
